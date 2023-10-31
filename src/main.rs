@@ -5,6 +5,8 @@ mod routes;
 mod controllers;
 mod models;
 mod db;
+mod schema;
+
 #[get("/")]
 async fn hello() -> impl Responder {
     HttpResponse::Ok().body("Hello, world!")
