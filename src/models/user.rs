@@ -13,8 +13,8 @@ pub struct User {
 
 #[derive(Insertable, Serialize)]
 #[table_name = "users"]
-pub struct NewUser {
-    pub username: String,
-    pub email: String,
-    pub password_hash: String,
+pub struct NewUser<'a> {
+    pub username: &'a str,
+    pub email: &'a str,
+    pub password_hash: &'a str,
 }
